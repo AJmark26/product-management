@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+
+# Build output
+dist/
+.next/
+build/
+
+# Prisma
+prisma/dev.db
