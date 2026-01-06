@@ -82,7 +82,7 @@ const Sidebar = () => {
         }`}
       >
         <Image
-          src="https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/logo.png"
+          src="https://s3-product-management.s3.ap-south-1.amazonaws.com/logo.png"
           alt="NEXTKART-logo"
           width={27}
           height={27}
@@ -146,7 +146,9 @@ const Sidebar = () => {
 
       {/* FOOTER */}
       <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
-        <p className="text-center text-xs text-gray-500">&copy; 2026 NEXTKART</p>
+        <p className="text-center text-xs text-gray-500">
+          &copy; 2026 NEXTKART
+        </p>
       </div>
     </div>
   );
