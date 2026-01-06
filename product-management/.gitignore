@@ -1,15 +1,7 @@
-# Node
-node_modules/
-npm-debug.log*
-
-# Environment
-.env
-.env.*
-
-# Build output
-dist/
-.next/
-build/
-
-# Prisma
-prisma/dev.db
+client/node_modules/
+server/node_modules/
+client/dist/
+server/dist/
+client/.env/
+server/.env/
+client/.next/
