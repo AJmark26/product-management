@@ -1,185 +1,262 @@
-project:
-  name: NEXTKART – SSR E-Commerce Product Management Dashboard
-  type: Full Stack SSR Web Application
-  description: >
-    NEXTKART is a production-grade Server-Side Rendered (SSR) e-commerce
-    product management dashboard built using Next.js, Node.js, Prisma,
-    and AWS. It provides an admin interface to manage products, inventory,
-    users, expenses, and sales analytics with real-world cloud deployment.
+🛒 NEXTKART – SSR E-Commerce Product Management Dashboard
 
-live_deployment:
-  frontend:
-    platform: AWS Amplify
-    url: https://main.d3bew0nxud1hkz.amplifyapp.com
-  backend:
-    platform: AWS API Gateway + EC2
-    url: https://2ezuzbxr51.execute-api.ap-south-1.amazonaws.com/prod
+NEXTKART is a production-grade, full-stack Server-Side Rendered (SSR) e-commerce product management dashboard built using Next.js, Node.js, Prisma, and AWS.
+It provides an admin interface to manage products, inventory, users, expenses, and sales analytics, deployed on real AWS cloud infrastructure.
 
-demo:
-  video_duration: 3 minutes
-  demo_video_link: "LINK"
+🚀 Live Deployment
+Frontend (SSR)
 
-features:
-  dashboard:
-    - Sales summary (weekly/monthly)
-    - Purchase summary
-    - Expense breakdown with charts
-    - Customer growth analytics
-    - Dues and pending orders
-  inventory:
-    - Product list with stock quantity
-    - Price and rating visibility
-  products:
-    - Product cards with images
-    - Stock availability
-    - Ratings display
-    - Create product UI
-  users:
-    - User listing
-    - User ID, name, and email display
-  settings:
-    - Profile settings
-    - Notification toggle
-    - Dark mode toggle
-    - Language preference
-  expenses:
-    - Filter by category and date
-    - Pie-chart visualization
-    - Category-wise expense analysis
+Platform: AWS Amplify
 
-tech_stack:
-  frontend:
-    - Next.js (App Router, SSR)
-    - TypeScript
-    - Tailwind CSS
-    - Redux Toolkit
-    - Recharts
-  backend:
-    - Node.js
-    - Express.js
-    - TypeScript
-    - Prisma ORM
-    - PostgreSQL
-  cloud_and_devops:
-    - AWS Amplify
-    - AWS EC2 (Amazon Linux 2023)
-    - AWS RDS (PostgreSQL)
-    - AWS S3
-    - AWS API Gateway
-    - PM2
+URL:
+👉 https://main.d3bew0nxud1hkz.amplifyapp.com
 
-project_structure:
-  root:
-    - client:
-        description: Next.js SSR frontend
-    - server:
-        description: Node.js backend with Prisma
-    - README.md
+Backend (API)
 
-local_setup:
-  clone_repository:
-    command: |
-      git clone https://github.com/AJmark26/product-management.git
-      cd product-management
-  frontend_setup:
-    commands: |
-      cd client
-      npm install
-      npm run dev
-    local_url: http://localhost:3000
-  backend_setup:
-    commands: |
-      cd server
-      npm install
-    environment_variables:
-      DATABASE_URL: postgresql://username:password@localhost:5432/productsmanagement
-      PORT: 8000
-    prisma_commands: |
-      npx prisma generate
-      npx prisma migrate deploy
-      npm run seed
-    start_backend: |
-      npm run dev
-    local_url: http://localhost:8000
+Platform: AWS API Gateway + EC2
 
-database:
-  type: PostgreSQL
-  orm: Prisma
-  tables:
-    - Products
-    - Users
-    - Sales
-    - Purchases
-    - Expenses
-    - ExpenseByCategory
-  seeding:
-    method: JSON-based seed files
-    command: npm run seed
+URL:
+👉 https://2ezuzbxr51.execute-api.ap-south-1.amazonaws.com/prod
 
-aws_architecture:
-  flow:
-    - User Browser
-    - AWS Amplify (SSR Frontend)
-    - AWS API Gateway
-    - AWS EC2 (Node.js Backend)
-    - AWS RDS (PostgreSQL)
-    - AWS S3 (Images)
+🎥 Demo Video
 
-backend_deployment:
-  ec2:
-    os: Amazon Linux 2023
-    process_manager: PM2
-    commands: |
-      pm2 start ecosystem.config.js
-      pm2 save
-      pm2 startup
+Duration: 3–5 minutes
 
-image_storage:
-  service: AWS S3
-  usage:
-    - Product images
-    - Profile images
-  access: Public read access
+Link: (Add Google Drive / YouTube link here)
 
-ci_cd:
-  frontend:
-    tool: AWS Amplify
-    trigger: GitHub push
-    result:
-      - Automatic build
-      - Automatic deployment
+🔐 Dummy Admin Credentials
+Email: admin@nextkart.com
+Password: admin123
 
-security:
-  practices:
-    - Environment variables for secrets
-    - RDS not publicly accessible
-    - EC2 protected via security groups
-    - API Gateway used for controlled access
+✨ Features
+📊 Dashboard
 
-performance:
-  rendering: Server-Side Rendering (SSR)
-  benefits:
-    - Faster initial load
-    - SEO-friendly pages
-    - Optimized data fetching
+Sales summary (weekly / monthly)
 
-learning_outcomes:
-  - Full-stack application development
-  - Production-level AWS deployment
-  - Prisma ORM with PostgreSQL
-  - SSR with Next.js App Router
-  - CI/CD using AWS Amplify
-  - Cloud image hosting with S3
+Purchase summary
 
-future_enhancements:
-  - Authentication and authorization
-  - Product CRUD operations
-  - Order management
-  - Pagination and advanced filters
-  - Email notifications
-  - Persistent dark mode
+Expense breakdown with charts
 
-author:
-  name: Anuj Kumar
-  education: B.Tech (ECE), IIT Roorkee
-  role: Full-Stack Developer
+Customer growth analytics
+
+Dues & pending orders overview
+
+📦 Inventory Management
+
+Product listing with stock quantity
+
+Price & rating visibility
+
+🛍 Products
+
+Product cards with images
+
+Stock availability
+
+Ratings display
+
+Create product UI
+
+👥 Users
+
+User listing
+
+User ID, name, and email display
+
+⚙️ Settings
+
+Profile settings
+
+Notification toggle
+
+Dark mode toggle
+
+Language preference
+
+💸 Expenses
+
+Filter by category and date
+
+Pie-chart visualization
+
+Category-wise expense analysis
+
+🧠 Tech Stack
+Frontend
+
+Next.js (App Router, SSR)
+
+TypeScript
+
+Tailwind CSS
+
+Redux Toolkit
+
+Recharts
+
+Backend
+
+Node.js
+
+Express.js
+
+TypeScript
+
+Prisma ORM
+
+PostgreSQL
+
+Cloud & DevOps
+
+AWS Amplify
+
+AWS EC2 (Amazon Linux 2023)
+
+AWS RDS (PostgreSQL)
+
+AWS S3
+
+AWS API Gateway
+
+PM2
+
+📁 Project Structure
+product-management/
+├── client/        # Next.js SSR frontend
+├── server/        # Node.js backend with Prisma
+└── README.md
+
+🛠 Local Setup
+1️⃣ Clone Repository
+git clone https://github.com/AJmark26/product-management.git
+cd product-management
+
+2️⃣ Frontend Setup
+cd client
+npm install
+npm run dev
+
+
+Local URL: http://localhost:3000
+
+3️⃣ Backend Setup
+cd server
+npm install
+
+Environment Variables (.env)
+DATABASE_URL=postgresql://username:password@localhost:5432/productmanagement
+PORT=8000
+
+Prisma Commands
+npx prisma generate
+npx prisma migrate deploy
+npm run seed
+
+Start Backend
+npm run dev
+
+
+Local URL: http://localhost:8000
+
+🗄 Database Design
+
+Type: PostgreSQL
+
+ORM: Prisma
+
+Tables
+
+Products
+
+Users
+
+Sales
+
+Purchases
+
+Expenses
+
+ExpenseByCategory
+
+Seeding
+
+JSON-based seed data
+
+Command: npm run seed
+
+☁️ AWS Architecture
+
+Request Flow:
+
+User Browser
+   ↓
+AWS Amplify (SSR Frontend)
+   ↓
+AWS API Gateway
+   ↓
+AWS EC2 (Node.js Backend)
+   ↓
+AWS RDS (PostgreSQL)
+   ↓
+AWS S3 (Images)
+
+🚢 Backend Deployment (EC2)
+
+OS: Amazon Linux 2023
+
+Process Manager: PM2
+
+pm2 start ecosystem.config.js
+pm2 save
+pm2 startup
+
+🖼 Image Storage
+
+Service: AWS S3
+
+Usage:
+
+Product images
+
+Profile images
+
+Access: Public read access
+
+🔁 CI/CD Pipeline
+Frontend
+
+Tool: AWS Amplify
+
+Trigger: GitHub push
+
+Result:
+
+Automatic build
+
+Automatic deployment
+
+🔒 Security Practices
+
+Environment variables for secrets
+
+RDS is not publicly accessible
+
+EC2 protected via security groups
+
+API Gateway used for controlled access
+
+⚡ Performance & SSR Benefits
+
+Faster initial page load
+
+SEO-friendly pages
+
+Optimized server-side data fetching
+
+👨‍💻 Author
+
+Anuj Kumar
+
+B.Tech (ECE), IIT Roorkee
+
+Full-Stack Developer
